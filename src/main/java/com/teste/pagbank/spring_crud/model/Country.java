@@ -1,14 +1,14 @@
 package com.teste.pagbank.spring_crud.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Builder;
 
 @Table(name="COUNTRY")
 @Entity
+@Builder
 public class Country {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
